@@ -6,8 +6,6 @@ using namespace std;
 enum class TokenType {
     INSTRUCTION,
     NUMBER,
-    LABEL,
-    LABEL_REF,
     END,
 };
 
