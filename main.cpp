@@ -1,5 +1,6 @@
 #include "headers/lexer.h"
 #include "headers/parser.h"
+#include "headers/vm.h"
 #include <bits/stdc++.h>
 #include <sstream>
 using namespace std;
@@ -54,5 +55,10 @@ int main(int argc, char const *argv[]){
     for (const auto& inst : bytecode) {
         cout << opCodeToString(inst.op) << " " << inst.operand << endl;
     }
+
+
+    cout<<"\n======Execution======"<<endl;
+    VM vm(bytecode);
+    vm.run();    
     return 0;
 }
